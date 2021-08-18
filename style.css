@@ -1,0 +1,73 @@
+/*Importando font-Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+/*-----Reset------*/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*-----navigation-mobile------*/
+header{
+    width: 100vw;
+    height: 100%;
+    background-image: linear-gradient(#1A1A1A, #2C2C2C);
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;
+}
+
+.nav-mobile{
+    align-items: center;
+}
+
+.nav-mobile img{
+    margin: 16px 0 16px 16px;
+    height: 40px;
+}
+
+header h1, p {
+    text-align: center;
+    color: white;
+    margin: 0px 38px;
+}
+
+header h1{
+    font: normal normal normal 40px/52px Roboto;
+    letter-spacing: 0.85px;
+    text-transform: capitalize;
+}
+
+header p{
+    font: normal normal 300 12px/26px Roboto;
+    color: #B5B5B5;
+    margin-top: 8vh;
+}
+div.button-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    margin-top: 6vh;
+}
+.button{
+    width:170px;
+    height: 56px;
+    border-radius: 5px;
+    margin: 0 0 20px 0; 
+    color: white;
+    font-size: 14px;
+}
+
+.btn-1{
+    background-color: initial;
+    border: 1px solid white
+}
+
+.btn-2{
+    background-color: #F89D24;
+}
