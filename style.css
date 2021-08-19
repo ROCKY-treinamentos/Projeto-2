@@ -3,7 +3,7 @@
 
 
 /*-----Reset------*/
-*{
+* {
     padding: 0;
     margin: 0;
     border: 0;
@@ -11,42 +11,44 @@
 }
 
 /*-----navigation-mobile------*/
-header{
+header {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(#1A1A1A, #2C2C2C);
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.nav-mobile{
+.nav-mobile {
     align-items: center;
 }
 
-.nav-mobile img{
+.nav-mobile img {
     margin: 16px 0 16px 16px;
     height: 40px;
 }
 
-header.header h1, header.header p {
+header.header h1,
+header.header p {
     text-align: center;
     color: white;
     margin: 0px 38px;
 }
 
-header.header h1{
+header.header h1 {
     font: normal normal normal 40px/52px Roboto;
     letter-spacing: 0.85px;
     text-transform: capitalize;
 }
 
-header.header p{
+header.header p {
     font: normal normal 300 12px/26px Roboto;
     color: #B5B5B5;
     margin-top: 8vh;
 }
-div.button-header{
+
+div.button-header {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -54,26 +56,27 @@ div.button-header{
     padding-bottom: 40px;
     margin-top: 6vh;
 }
-.button{
-    width:170px;
+
+.button {
+    width: 170px;
     height: 56px;
     border-radius: 5px;
-    margin: 0 0 20px 0; 
+    margin: 0 0 20px 0;
     color: white;
     font-size: 14px;
 }
 
-.btn-1{
+.btn-1 {
     background-color: initial;
     border: 1px solid white
 }
 
-.btn-2{
+.btn-2 {
     background-color: #F89D24;
 }
 
 /*-----section-clients------*/
-section.section-clients{
+section.section-clients {
     background-image: linear-gradient(#1A1A1A, #2C2C2C);
     display: flex;
     flex-direction: column;
@@ -81,31 +84,32 @@ section.section-clients{
     align-items: center;
 }
 
-div.block-border{
+div.block-border {
     width: 110px;
     height: 105px;
     border: 1px solid #FEC024;
     border-top: 0px;
     position: absolute;
-    margin:-1px 0px 0px 23px;
+    margin: -1px 0px 0px 23px;
     align-self: flex-start;
 }
 
-section.section-clients h2{
+section.section-clients h2 {
     display: inline;
     font: normal bold normal 48px/62px Roboto;
     color: white;
-    margin:45px 0px 30px 32px;
+    margin: 45px 0px 30px 32px;
     align-self: flex-start;
 }
-section.section-clients p{
+
+section.section-clients p {
     color: #B5B5B5;
     font: normal normal normal 12px/26px Roboto;
     text-align: left;
-    margin:0 32px 0 32px;
+    margin: 0 32px 0 32px;
 }
 
-article.article-clients{
+article.article-clients {
     width: 254px;
     height: 100%;
     display: flex;
@@ -113,12 +117,12 @@ article.article-clients{
     align-items: center;
     border: 1px solid #6E6E6E;
     border-radius: 5px;
-    box-sizing:border-box;
+    box-sizing: border-box;
     margin: 30px 50px 0px 50px;
     padding: 24px;
 }
 
-article.article-clients h5{
+article.article-clients h5 {
     align-self: flex-start;
     color: #F89D24;
     font: normal normal bold 16px/18px Roboto;
@@ -127,7 +131,7 @@ article.article-clients h5{
     margin-top: 30px;
 }
 
-article.article-clients p{
+article.article-clients p {
     font: normal normal bold 12px/22px Roboto;
     margin: 0;
     margin-top: 5px;
@@ -135,14 +139,14 @@ article.article-clients p{
 
 /*-----section-value------*/
 
-section.section-value{
-    background: linear-gradient(#1a1a1ad8 , #2c2c2c1f ), url(/img/Fundo-formas.svg) center bottom no-repeat, #1A1A1A;
+section.section-value {
+    background: linear-gradient(#1a1a1ad8, #2c2c2c1f), url(/img/Fundo-formas.svg) center bottom no-repeat, #1A1A1A;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
 }
 
-article.article-text{
+article.article-text {
     padding: 45px 24px;
     font: normal normal normal 30px/52px Roboto;
     text-align: center;
@@ -151,18 +155,18 @@ article.article-text{
     color: #FFFFFF;
 }
 
-article.article-value{
-    background-color:#F89D24;
+article.article-value {
+    background-color: #F89D24;
     text-align: center;
     padding: 45px 0px;
 }
 
-article.article-value h2{
+article.article-value h2 {
     color: #FFFFFF;
     font: normal normal normal 48px/62px Roboto;
 }
 
-article.article-value button.button-value{
+article.article-value button.button-value {
     margin-top: 35px;
     background-color: #FFFFFF;
     color: #F89D24;
@@ -170,49 +174,51 @@ article.article-value button.button-value{
 }
 
 /*-----section-value------*/
-section.section-options{
+section.section-options {
     width: 100%;
-    background: transparent url('img/teacher.png') 0% 0% no-repeat padding-box;;
+    background: transparent url('img/teacher.png') 0% 0% no-repeat padding-box;
+    ;
     background-attachment: fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-section.section-options h2{
+
+section.section-options h2 {
     font: normal normal normal 48px/62px Roboto;
     letter-spacing: 1.01px;
-    margin:45px 0px 30px 32px;
+    margin: 45px 0px 30px 32px;
     color: #FFFFFF;
 }
 
-section.section-options div.options{
+section.section-options div.options {
     width: 90vw;
     height: 46px;
-    background-color:#686868;
+    background-color: #686868;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px 0 20px;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
-section.section-options div.options img{
+section.section-options div.options img {
     width: 40px;
 }
 
-section.section-options div.options p{
+section.section-options div.options p {
     color: #FFFFFF;
     font: normal normal bold 16px/31px Roboto;
     letter-spacing: 1px;
 }
 
-section.section-options div.options-description{
-    width:90vw;
+section.section-options div.options-description {
+    width: 90vw;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #262626 ;
+    background-color: #262626;
     color: #FFFFFF;
     border: 2px solid #F89D24;
     border-left: 0px;
@@ -223,3 +229,51 @@ section.section-options div.options-description p {
     font: normal normal normal 18px/31px Roboto;
 }
 
+/*-----section-teachers------*/
+
+section.section-teachers {
+    background: #0C0C0C;
+    color: #FFFFFF;
+}
+
+section.section-teachers h2 {
+    font: normal normal normal 40px/62px Roboto;
+    letter-spacing: 1.01px;
+    padding: 50px 0 10px 40px;
+}
+
+section.section-teachers div.grid-teachers {
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+article.article-teacher {
+    width: 80vw;
+    margin: 10px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #6E6E6E;
+    border-radius: 5px;
+    text-align: center;
+}
+
+article.article-teacher img {
+    width: 100%;
+}
+
+article.article-teacher h5 {
+    color: #F89D24;
+    font: normal normal bold 14px/18px Roboto;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+article.article-teacher p {
+    font: normal normal bold 11px/26px Roboto;
+    margin-top: 5px;
+    text-align: left;
+    color: #B5B5B5;
+}
