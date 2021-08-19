@@ -29,19 +29,19 @@ header{
     height: 40px;
 }
 
-header h1, p {
+header.header h1, header.header p {
     text-align: center;
     color: white;
     margin: 0px 38px;
 }
 
-header h1{
+header.header h1{
     font: normal normal normal 40px/52px Roboto;
     letter-spacing: 0.85px;
     text-transform: capitalize;
 }
 
-header p{
+header.header p{
     font: normal normal 300 12px/26px Roboto;
     color: #B5B5B5;
     margin-top: 8vh;
@@ -167,5 +167,59 @@ article.article-value button.button-value{
     background-color: #FFFFFF;
     color: #F89D24;
     text-transform: uppercase;
+}
+
+/*-----section-value------*/
+section.section-options{
+    width: 100%;
+    background: transparent url('img/teacher.png') 0% 0% no-repeat padding-box;;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.section-options h2{
+    font: normal normal normal 48px/62px Roboto;
+    letter-spacing: 1.01px;
+    margin:45px 0px 30px 32px;
+    color: #FFFFFF;
+}
+
+section.section-options div.options{
+    width: 90vw;
+    height: 46px;
+    background-color:#686868;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    box-sizing:border-box;
+}
+
+section.section-options div.options img{
+    width: 40px;
+}
+
+section.section-options div.options p{
+    color: #FFFFFF;
+    font: normal normal bold 16px/31px Roboto;
+    letter-spacing: 1px;
+}
+
+section.section-options div.options-description{
+    width:90vw;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #262626 ;
+    color: #FFFFFF;
+    border: 2px solid #F89D24;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+section.section-options div.options-description p {
+    font: normal normal normal 18px/31px Roboto;
 }
 
