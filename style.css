@@ -12,7 +12,7 @@
 
 /*-----navigation-mobile------*/
 header{
-    width: 100vw;
+    width: 100%;
     height: 100%;
     background-image: linear-gradient(#1A1A1A, #2C2C2C);
     display: flex;
@@ -70,4 +70,65 @@ div.button-header{
 
 .btn-2{
     background-color: #F89D24;
+}
+
+/*-----section-clients------*/
+section.section-clients{
+    background-image: linear-gradient(#1A1A1A, #2C2C2C);
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    align-items: center;
+}
+
+div.block-border{
+    width: 110px;
+    height: 105px;
+    border: 1px solid #FEC024;
+    border-top: 0px;
+    position: absolute;
+    margin:-1px 0px 0px 23px;
+    align-self: flex-start;
+}
+
+section.section-clients h2{
+    display: inline;
+    font: normal bold normal 48px/62px Roboto;
+    color: white;
+    margin:45px 0px 30px 32px;
+    align-self: flex-start;
+}
+section.section-clients p{
+    color: #B5B5B5;
+    font: normal normal normal 12px/26px Roboto;
+    text-align: left;
+    margin:0 32px 0 32px;
+}
+
+article.article-clients{
+    width: 254px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #6E6E6E;
+    border-radius: 5px;
+    box-sizing:border-box;
+    margin: 30px 50px 0px 50px;
+    padding: 24px;
+}
+
+article.article-clients h5{
+    align-self: flex-start;
+    color: #F89D24;
+    font: normal normal bold 16px/18px Roboto;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+article.article-clients p{
+    font: normal normal bold 12px/22px Roboto;
+    margin: 0;
+    margin-top: 5px;
 }
