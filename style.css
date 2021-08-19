@@ -132,3 +132,40 @@ article.article-clients p{
     margin: 0;
     margin-top: 5px;
 }
+
+/*-----section-value------*/
+
+section.section-value{
+    background: linear-gradient(#1a1a1ad8 , #2c2c2c1f ), url(/img/Fundo-formas.svg) center bottom no-repeat, #1A1A1A;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+article.article-text{
+    padding: 45px 24px;
+    font: normal normal normal 30px/52px Roboto;
+    text-align: center;
+    letter-spacing: 0.85px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+article.article-value{
+    background-color:#F89D24;
+    text-align: center;
+    padding: 45px 0px;
+}
+
+article.article-value h2{
+    color: #FFFFFF;
+    font: normal normal normal 48px/62px Roboto;
+}
+
+article.article-value button.button-value{
+    margin-top: 35px;
+    background-color: #FFFFFF;
+    color: #F89D24;
+    text-transform: uppercase;
+}
+
