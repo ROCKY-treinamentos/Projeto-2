@@ -209,7 +209,7 @@ section.section-options div.options img {
     width: 40px;
 }
 
-.rotate{
+.rotate {
     transition-duration: 0.5s;
     transform: rotate(180deg);
 }
@@ -282,4 +282,26 @@ article.article-teacher p {
     margin-top: 5px;
     text-align: left;
     color: #B5B5B5;
+}
+
+/*-----section-carousel------*/
+section.section-carousel {
+    padding: 60px 25px;
+    background: url(img/opinion.png);
+    text-align: center;
+}
+
+section.section-carousel h2 {
+    color: #FFFFFF;
+    font: normal normal normal 40px/52px Roboto;
+    letter-spacing: 0.85px;
+    margin: 0px 10px 0px 10px;
+}
+
+section.section-carousel p {
+    font: normal normal bold 18px/23px Roboto;
+    letter-spacing: 2.57px;
+    color: #F89D24;
+    text-transform: uppercase;
+    margin: 20px 0px 0px 0px;
 }
