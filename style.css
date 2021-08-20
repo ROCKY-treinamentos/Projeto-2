@@ -305,3 +305,38 @@ section.section-carousel p {
     text-transform: uppercase;
     margin: 20px 0px 0px 0px;
 }
+
+/*-----section-methodology------*/
+section.section-methodology {
+    background: radial-gradient(#1A1A1A, #2C2C2C);
+}
+
+section.section-methodology h2 {
+    color: #FFFFFF;
+    font: normal normal normal 48px/62px Roboto;
+    letter-spacing: 1.02px;
+    padding: 50px 30px 0px 30px;
+}
+
+section.section-methodology ul{
+    list-style:circle;
+    margin-left: 30px;
+}
+
+section.section-methodology ul li{
+    font: normal normal bold 14px/18px Roboto;
+    letter-spacing: 2px;
+    color: #F89D24;
+    text-transform: uppercase;
+    padding: 30px 0px 0px 0px;    
+}
+
+section.section-methodology ul > p{
+    padding: 10px 30px 0px 0px;
+}
+
+section.section-methodology p {
+    color: #B5B5B5;
+    font: normal normal normal 14px/26px Roboto;
+    padding: 10px 30px 0px 30px;
+}
