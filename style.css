@@ -13,15 +13,29 @@
 /*-----navigation-mobile------*/
 header {
     width: 100%;
-    height: 100%;
+    height: 120vh;
     background-image: linear-gradient(#1A1A1A, #2C2C2C);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: auto;
+    box-sizing: border-box;
+    justify-items: center;
+}
+
+h2{
+    font: normal normal normal 48px/62px Roboto;
+    color: #FFFFFF;
+    align-self: flex-start;
+    letter-spacing: 2px;
+}
+
+p{
+    font: normal normal normal 14px/26px Roboto;
+    color: #B5B5B5;
 }
 
 .nav-mobile {
     align-items: center;
+    justify-self: flex-start;
 }
 
 .nav-mobile img {
@@ -31,9 +45,10 @@ header {
 
 header.header h1,
 header.header p {
+    max-width: 600px;
     text-align: center;
-    color: white;
-    margin: 0px 38px;
+    margin: 0 38px;
+    color: #FFFFFF;
 }
 
 header.header h1 {
@@ -43,16 +58,18 @@ header.header h1 {
 }
 
 header.header p {
+    width:75vw ;
+    max-width: 300px;
     font: normal normal 300 12px/26px Roboto;
     color: #B5B5B5;
-    margin-top: 8vh;
+    margin-top: 3vh;
 }
 
 div.button-header {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr ;
+    justify-items: center;
     padding-bottom: 40px;
     margin-top: 6vh;
 }
@@ -62,26 +79,31 @@ div.button-header {
     height: 56px;
     border-radius: 5px;
     margin: 0 0 20px 0;
-    color: white;
+    color: #FFFFFF;
     font-size: 14px;
 }
 
 .btn-1 {
     background-color: initial;
-    border: 1px solid white
+    border: 1px solid #FFFFFF
 }
 
 .btn-2 {
     background-color: #F89D24;
 }
 
+.section-default{
+    padding: 43px 24px 0px 24px ;
+    box-sizing: content-box;
+}
 /*-----section-clients------*/
 section.section-clients {
     background-image: linear-gradient(#1A1A1A, #2C2C2C);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr auto;
+    grid-row-gap: 30px;
     box-sizing: content-box;
-    align-items: center;
 }
 
 div.block-border {
@@ -89,28 +111,13 @@ div.block-border {
     height: 105px;
     border: 1px solid #FEC024;
     border-top: 0px;
-    position: absolute;
-    margin: -1px 0px 0px 23px;
+    position:absolute;
+    margin: -43px 0 0 -10px;
     align-self: flex-start;
-}
-
-section.section-clients h2 {
-    display: inline;
-    font: normal bold normal 48px/62px Roboto;
-    color: white;
-    margin: 45px 0px 30px 32px;
-    align-self: flex-start;
-}
-
-section.section-clients p {
-    color: #B5B5B5;
-    font: normal normal normal 12px/26px Roboto;
-    text-align: left;
-    margin: 0 32px 0 32px;
 }
 
 article.article-clients {
-    width: 254px;
+    width: 70vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -118,23 +125,17 @@ article.article-clients {
     border: 1px solid #6E6E6E;
     border-radius: 5px;
     box-sizing: border-box;
-    margin: 30px 50px 0px 50px;
     padding: 24px;
+    justify-self: center;
 }
 
 article.article-clients h5 {
-    align-self: flex-start;
-    color: #F89D24;
-    font: normal normal bold 16px/18px Roboto;
+    font: normal normal bold 14px/18px Roboto;
     letter-spacing: 2px;
+    color: #F89D24;
     text-transform: uppercase;
     margin-top: 30px;
-}
-
-article.article-clients p {
-    font: normal normal bold 12px/22px Roboto;
-    margin: 0;
-    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /*-----section-value------*/
@@ -143,27 +144,25 @@ section.section-value {
     background: linear-gradient(#1a1a1ad8, #2c2c2c1f), url(/img/Fundo-formas.svg) center bottom no-repeat, #1A1A1A;
     background-size: cover;
     background-attachment: fixed;
-    position: relative;
 }
 
-article.article-text {
-    padding: 45px 24px;
-    font: normal normal normal 30px/52px Roboto;
+article.article-text h2{
+    font: normal normal normal 41px/52px Roboto;
     text-align: center;
     letter-spacing: 0.85px;
     text-transform: capitalize;
-    color: #FFFFFF;
+    padding: 40px 24px 40px 24px;
 }
 
 article.article-value {
+    padding: unset;
     background-color: #F89D24;
     text-align: center;
     padding: 45px 0px;
 }
 
-article.article-value h2 {
-    color: #FFFFFF;
-    font: normal normal normal 48px/62px Roboto;
+article.article-value h2{
+    letter-spacing: 1.01px;
 }
 
 article.article-value button.button-value {
@@ -173,28 +172,24 @@ article.article-value button.button-value {
     text-transform: uppercase;
 }
 
-/*-----section-value------*/
+/*-----section-option------*/
 section.section-options {
-    width: 100%;
     background: transparent url('img/teacher.png') 0% 0% no-repeat padding-box;
-    ;
     background-attachment: fixed;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    justify-items: center;
 }
 
 section.section-options h2 {
-    font: normal normal normal 48px/62px Roboto;
-    letter-spacing: 1.01px;
-    margin: 45px 0px 30px 32px;
-    align-self: start;
-    color: #FFFFFF;
+    margin-bottom: 30px;
+    justify-self: flex-start;
 }
 
 section.section-options div.options {
-    width: 90vw;
+    width: 100%;
     height: 46px;
     background-color: #686868;
     display: flex;
@@ -216,7 +211,7 @@ section.section-options div.options img {
 
 section.section-options div.options p {
     color: #FFFFFF;
-    font: normal normal bold 16px/31px Roboto;
+    font: normal normal bold 18px/31px Roboto;
     letter-spacing: 1px;
 }
 
@@ -232,7 +227,7 @@ section.section-options div.options-description {
 }
 
 section.section-options div.options-description p {
-    font: normal normal normal 18px/31px Roboto;
+    font: normal normal 300 18px/31px Roboto;
 }
 
 /*-----section-teachers------*/
@@ -240,12 +235,13 @@ section.section-options div.options-description p {
 section.section-teachers {
     background: #0C0C0C;
     color: #FFFFFF;
+    display: grid;
+    grid-template-columns: auto;
 }
 
 section.section-teachers h2 {
-    font: normal normal normal 40px/62px Roboto;
-    letter-spacing: 1.01px;
-    padding: 50px 0 10px 40px;
+    margin-bottom: 20px;
+    
 }
 
 section.section-teachers div.grid-teachers {
@@ -278,7 +274,7 @@ article.article-teacher h5 {
 }
 
 article.article-teacher p {
-    font: normal normal bold 11px/26px Roboto;
+    font: normal normal bold 16px/26px Roboto;
     margin-top: 5px;
     text-align: left;
     color: #B5B5B5;
@@ -288,6 +284,8 @@ article.article-teacher p {
 section.section-carousel {
     padding: 60px 25px;
     background: url(img/opinion.png);
+    background-size: cover;
+    background-attachment: fixed;
     text-align: center;
 }
 
@@ -311,16 +309,9 @@ section.section-methodology {
     background: radial-gradient(#1A1A1A, #2C2C2C);
 }
 
-section.section-methodology h2 {
-    color: #FFFFFF;
-    font: normal normal normal 48px/62px Roboto;
-    letter-spacing: 1.02px;
-    padding: 50px 30px 0px 30px;
-}
-
 section.section-methodology ul {
     list-style: circle;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 section.section-methodology ul li {
@@ -332,13 +323,12 @@ section.section-methodology ul li {
 }
 
 section.section-methodology ul>p {
-    padding: 10px 30px 0px 0px;
+    padding: 10px 0px 0px 0px;
 }
 
 section.section-methodology p {
-    color: #B5B5B5;
-    font: normal normal normal 14px/26px Roboto;
-    padding: 10px 30px 0px 30px;
+
+    padding: 10px 0px 0px 0px;
 }
 
 
@@ -346,17 +336,17 @@ section.section-methodology p {
 section.section-question {
     width: 100;
     background: linear-gradient(#2c2c2c63,#1a1a1ab2), url(/img/negociando.png) center bottom no-repeat, #1A1A1A;
+    background-size:cover;
+    background-attachment: fixed;
 }
 
-section.section-question h2 {
-    font: normal normal normal 48px/62px Roboto;
-    letter-spacing: 1.01px;
-    color: #FFFFFF;
-    padding: 50px 30px 0px 30px;
+/*-----footer------*/
+footer{
+    height: 200px;
+    background-color: #0C0C0C;
+    text-align: center;
 }
 
-section.section-question p {
-    font: normal normal normal 14px/26px Roboto;
-    color: #B5B5B5;
-    margin: 20px 20px 30px 20px;
+footer p{
+    padding: 50px 0 0 0;
 }
