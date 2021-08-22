@@ -421,4 +421,14 @@ footer p {
         width: 100%;
     }
 
+   /*------Seção Valor-----*/
+   section.section-value{
+       display: grid;
+       grid-template-columns: 60% 40%;
+       align-items: center;
+   }
+
+   article.article-value{
+       margin: 20px 0px 20px 0px;
+   }
 }
