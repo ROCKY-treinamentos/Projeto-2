@@ -40,7 +40,8 @@ p{
 
 .nav-mobile img {
     margin: 16px 0 16px 16px;
-    height: 40px;
+    width: 15vw;
+    max-width:116px ;
 }
 
 header.header h1,
@@ -67,9 +68,9 @@ header.header p {
 
 div.button-header {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr ;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 40px;
     margin-top: 6vh;
 }
@@ -349,4 +350,22 @@ footer{
 
 footer p{
     padding: 50px 0 0 0;
+}
+
+/*------------------*/
+@media screen and (min-width:760px){
+
+    /*------cabeçalho desktop-----*/
+    header.header{
+        height: 100vh;
+        grid-template-rows: 30% 20% 10% 40%;
+    }
+
+    div.button-header {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .button{
+        margin: 0 10px;
+    }
 }
