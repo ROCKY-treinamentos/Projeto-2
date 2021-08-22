@@ -534,4 +534,26 @@ footer p {
       text-align: right;
       margin: 10px 20vw 0 10px;
   }
+
+    /*------Seção Metodologia-----*/
+    section.section-methodology{
+        display: grid;
+        grid-template-columns: 30% 40%;
+        grid-template-rows: 60%;
+        grid-gap: 50px;
+        justify-content: center;
+    }
+
+    section.section-methodology div.button-header{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .column-text, .column-list{
+        margin-top: 80px;
+    }
+
+    section.column-list{
+        width: 70%;
+    }
 }
