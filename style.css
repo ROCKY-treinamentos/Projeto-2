@@ -556,4 +556,40 @@ footer p {
     section.column-list{
         width: 70%;
     }
+
+    /*------Seção Questão-----*/
+    section.section-question{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4fr ;
+        height: 100%;
+        background: linear-gradient(#2c2c2c63, #1a1a1ab2), url(/img/negociando2x.png) 0%  bottom no-repeat, #1A1A1A;
+        background-size: contain;
+        background-attachment: fixed;
+        justify-items:center;
+    }
+
+    section.section-question div.img img{
+        width: 100%;
+    }
+
+    section.section-question div.container-question{
+        width: 50%;
+        display: grid;
+        grid-template-rows: 2fr 2fr 2fr;
+        grid-gap: 20px;
+    }
+
+    div.container-question div.block-border{
+        margin-left: 10%;
+    }
+
+    div.container-question h2{
+        margin-top: 100px;
+    }
+
+    div.container-question div.button-header{
+        justify-content: flex-start;
+    }
+
 }
