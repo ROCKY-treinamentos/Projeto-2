@@ -256,11 +256,13 @@ section.section-teachers div.grid-teachers {
     margin: auto auto;
     display: grid;
     grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 30px;
 }
 
 article.article-teacher {
     width: 80vw;
-    margin: 10px auto;
+    margin: auto;
     padding: 20px;
     box-sizing: border-box;
     border: 1px solid #6E6E6E;
@@ -492,4 +494,28 @@ footer p {
       color: #F89D24;
   }
 
+  /*------Seção Professores-----*/
+  section.section-teachers{
+      padding:43px 90px;
+  }
+
+  section.section-teachers h2{
+      margin-top: 80px;
+      margin-left: 130px;
+  }
+
+  section.section-teachers div.grid-teachers{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 30px;
+  }
+
+  .display-desk{
+      display: block;
+  }
+
+  section.section-teachers article.article-teacher{
+      width: 100%;
+  }
 }
