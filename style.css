@@ -33,6 +33,10 @@ p {
     color: #B5B5B5;
 }
 
+.display-none-mobile{
+    display: none;
+}
+
 .nav-mobile {
     align-items: center;
     justify-self: flex-start;
@@ -294,6 +298,9 @@ article.article-teacher p {
 section.section-carousel {
     padding: 60px 25px;
     background: url(img/opinion.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-size: cover;
     background-attachment: fixed;
     text-align: center;
@@ -303,7 +310,8 @@ section.section-carousel h2 {
     color: #FFFFFF;
     font: normal normal normal 40px/52px Roboto;
     letter-spacing: 0.85px;
-    margin: 0px 10px 0px 10px;
+    max-width: 800px;
+    align-self: center;
 }
 
 section.section-carousel p {
@@ -517,5 +525,13 @@ footer p {
 
   section.section-teachers article.article-teacher{
       width: 100%;
+  }
+  /*------Seção Carrosel-----*/
+  section.section-carousel{
+      padding: 100px 0px;
+  }
+  section.section-carousel p{
+      text-align: right;
+      margin: 10px 20vw 0 10px;
   }
 }
