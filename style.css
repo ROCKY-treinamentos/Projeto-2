@@ -21,14 +21,14 @@ header {
     justify-items: center;
 }
 
-h2{
+h2 {
     font: normal normal normal 48px/62px Roboto;
     color: #FFFFFF;
     align-self: flex-start;
     letter-spacing: 2px;
 }
 
-p{
+p {
     font: normal normal normal 14px/26px Roboto;
     color: #B5B5B5;
 }
@@ -41,25 +41,25 @@ p{
 .nav-mobile img {
     margin: 16px 0 16px 16px;
     width: 15vw;
-    max-width:116px ;
+    max-width: 116px;
 }
 
 header.header h1,
 header.header p {
-    max-width: 600px;
+    max-width: 800px;
     text-align: center;
     margin: 0 38px;
     color: #FFFFFF;
 }
 
-header.header h1 {
+h1 {
     font: normal normal normal 40px/52px Roboto;
     letter-spacing: 0.85px;
     text-transform: capitalize;
 }
 
 header.header p {
-    width:75vw ;
+    width: 75vw;
     max-width: 300px;
     font: normal normal 300 12px/26px Roboto;
     color: #B5B5B5;
@@ -93,16 +93,17 @@ div.button-header {
     background-color: #F89D24;
 }
 
-.section-default{
-    padding: 43px 24px 0px 24px ;
+.section-default {
+    padding: 43px 24px 0px 24px;
     box-sizing: content-box;
 }
+
 /*-----section-clients------*/
 section.section-clients {
     background-image: linear-gradient(#1A1A1A, #2C2C2C);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:1fr auto;
+    grid-template-rows: 1fr auto;
     grid-row-gap: 30px;
     box-sizing: content-box;
 }
@@ -112,14 +113,20 @@ div.block-border {
     height: 105px;
     border: 1px solid #FEC024;
     border-top: 0px;
-    position:absolute;
+    position: absolute;
     margin: -43px 0 0 -10px;
     align-self: flex-start;
 }
 
+div.grid-column-2{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto;
+    grid-row-gap: 30px;
+}
 article.article-clients {
     width: 70vw;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,7 +134,7 @@ article.article-clients {
     border-radius: 5px;
     box-sizing: border-box;
     padding: 24px;
-    justify-self: center;
+    justify-content: center;
 }
 
 article.article-clients h5 {
@@ -147,7 +154,7 @@ section.section-value {
     background-attachment: fixed;
 }
 
-article.article-text h2{
+article.article-text h2 {
     font: normal normal normal 41px/52px Roboto;
     text-align: center;
     letter-spacing: 0.85px;
@@ -162,7 +169,7 @@ article.article-value {
     padding: 45px 0px;
 }
 
-article.article-value h2{
+article.article-value h2 {
     letter-spacing: 1.01px;
 }
 
@@ -242,7 +249,7 @@ section.section-teachers {
 
 section.section-teachers h2 {
     margin-bottom: 20px;
-    
+
 }
 
 section.section-teachers div.grid-teachers {
@@ -336,27 +343,42 @@ section.section-methodology p {
 /*-----section-question------*/
 section.section-question {
     width: 100;
-    background: linear-gradient(#2c2c2c63,#1a1a1ab2), url(/img/negociando.png) center bottom no-repeat, #1A1A1A;
-    background-size:cover;
+    background: linear-gradient(#2c2c2c63, #1a1a1ab2), url(/img/negociando.png) center bottom no-repeat, #1A1A1A;
+    background-size: cover;
     background-attachment: fixed;
 }
 
 /*-----footer------*/
-footer{
+footer {
     height: 200px;
     background-color: #0C0C0C;
     text-align: center;
 }
 
-footer p{
+footer p {
     padding: 50px 0 0 0;
 }
 
 /*------------------*/
-@media screen and (min-width:760px){
+@media screen and (min-width:760px) {
+
+    h1 {
+        font: normal normal normal 54px/70px Roboto;
+        letter-spacing: 1.13px;
+    }
+
+    h2 {
+        font: normal normal normal 64px/83px Roboto;
+        letter-spacing: 1.34px;
+        color: #FFFFFF;
+    }
+
+    p {
+        font: normal normal normal 18px/26px Roboto;
+    }
 
     /*------cabeçalho desktop-----*/
-    header.header{
+    header.header {
         height: 100vh;
         grid-template-rows: 30% 20% 10% 40%;
     }
@@ -365,7 +387,38 @@ footer p{
         flex-direction: row;
         justify-content: center;
     }
-    .button{
+
+    .button {
         margin: 0 10px;
     }
+
+    /*------Seção clientes-----*/
+    div.block-border {
+        width: 256px;
+        height: 206px;
+        margin-left: 40px;
+    }
+
+    section.section-clients {
+        grid-template-columns: 30% 50%;
+        grid-template-rows: 60% 20%;
+        grid-column-gap: 40px;
+        justify-content: center;
+    }
+
+    div.grid-column-1 {
+        margin-top: 70px;
+    }
+
+    div.grid-column-2 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 20px;
+        margin-top: 50px;
+    }
+
+    article.article-clients {
+        width: 100%;
+    }
+
 }
