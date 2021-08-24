@@ -7,10 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <title>Projeto 2</title>
 </head>
 
 <body>
+    <!--Form-Modal-->
+    <div id="modal" class="modal">
+        <form action="" id="form">
+            <button type="button" id="close" class="close">X</button>
+            <h2>Formulario</h2>
+            <div class="input"><input id="name" type="text" required>
+                <label>Nome:</label>
+                <span class="error"></span>
+            </div>
+    
+            <div class="input"><input id="tel" type="text"  required>
+                <label>Telefone:</label>
+                <span class="error"></span>
+            </div>
+    
+            <div class="input"><input id="cpf" type="text" maxlength="14"  required>
+                <label>CPF:</label>
+                <span class="error"></span>
+            </div>
+    
+            <div class="input"><input id="email" type="text" required>
+                <label>Email:</label>
+                <span class="error"></span>
+            </div>
+            <div class="check">
+                <input id="check" type="checkbox" required> Concordo com os termos
+            </div>
+            
+            <button id="enviar" type="submit">Enviar</button>
+        </form>
+    </div>
+
     <!--Cabeçalho-->
     <header class="header">
         <nav class="nav-mobile">
@@ -146,9 +180,6 @@
         <section class="section-teachers section-default">
             <div class="block-border"></div>
             <h2>Nossos<br> Professores</h2>
-            <div class="grid-taachers">
-
-            </div>
             <div class="grid-teachers">
                 <article class="article-teacher">
                     <img src="/img/professor.png" alt="teacher">
@@ -264,6 +295,7 @@
             <li class="display-none-mobile">Texto adicional3</li>
         </ul>
     </footer>
+    
 
 </body>
 

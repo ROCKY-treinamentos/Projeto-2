@@ -10,6 +10,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
 /*-----navigation-mobile------*/
 header {
     width: 100%;
@@ -50,7 +51,7 @@ p {
 
 header.header h1,
 header.header p {
-    max-width: 800px;
+    max-width: 600px;
     text-align: center;
     margin: 0 38px;
     color: #FFFFFF;
@@ -370,8 +371,171 @@ footer p {
     padding: 50px 0 0 0;
 }
 
+/*-------Formulario Modal-------*/
+div.modal{
+    background: #2c2c2c96;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    z-index: 2000;
+
+}
+
+@keyframes teste{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+
+    }to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.modal.mostrar {
+    display: flex;
+    animation:teste 1s;
+}
+
+button.close{
+    width:55px;
+    height: 55px;
+    position: absolute;
+    color: #FFFFFF;
+    top: -40px;
+    right: -20px;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 1.2em;
+    border: 2px solid #686868;
+
+}
+form{
+    background-image: linear-gradient(#1A1A1A, #2C2C2C);
+    width: 70%;
+    max-width: 500px;
+    margin: 32px auto;
+    padding: 32px;
+    border: 2px solid #FEC024;
+    border-style: inset;
+    position: relative;
+    
+}
+
+form h2{
+    margin-bottom: 32px;
+    font: normal normal normal 48px/62px Roboto;
+}
+
+div.input{
+    margin-bottom: 24px;
+    position: relative;
+}
+
+div.check{
+    display: flex;
+    color: #FFFFFF;
+    justify-content: flex-start;
+    align-items: center
+}
+input#check{
+    width: 40px;
+    appearance:auto;
+}
+
+form input, form button{
+    appearance: none;
+    width: 100%;
+    padding: 16px 0;
+    border: none;
+    border-bottom: 1px solid #F89D24;
+    background-color: transparent;
+    outline: none;
+    color: #FFFFFF;
+}
+
+form button{
+    margin-top: 16px;
+    background-color: #F89D24;
+    font: normal normal normal 16px Roboto;
+    color: #FFFFFF;
+}
+
+
+input ~ label{
+    position: absolute;
+    top: 16px;
+    left: 0;
+    color:#FFFFFF;
+    transition: .4s;
+}
+
+input span.error{
+    display: flex;
+    padding: 0;
+    background-color: red;
+}
+
+span.error.active{
+    border: 1px solid red;
+    padding: 0.4em;
+}
+
+input:focus ~ label, input:valid ~ label{
+    transform: translateY(-24px);
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+
 /*------------------*/
 @media screen and (min-width:760px) {
+
+     /*------cabeçalho desktop-----*/
+     header.header {
+        height: 100vh;
+        grid-template-rows: 30% 20% 10% 30%;
+    }
+
+    div.button-header {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .button {
+        margin: 0 10px;
+    }
+
+    /*------Seção clientes-----*/
+    section.section-clients div.grid-column-2{
+        grid-template-columns: 40% 40%;
+        grid-template-rows: auto;
+        grid-gap: 30px;
+    }
+
+    section.section-clients article.article-clients{
+        width: 100%;
+    }
+
+    /*------Seção Professores-----*/
+    section.section-teachers div.grid-teachers{
+        grid-template-columns: 40% 40%;
+        grid-template-rows: auto;
+        justify-content: center
+    }
+
+    div.grid-teachers article.article-teacher{
+        width: 100%;
+    }
+
+}
+
+/*------------------*/
+@media screen and (min-width:1300px) {
 
     h1 {
         font: normal normal normal 54px/70px Roboto;
@@ -383,24 +547,17 @@ footer p {
         letter-spacing: 1.34px;
         color: #FFFFFF;
     }
-
     p {
         font: normal normal normal 18px/26px Roboto;
     }
 
-    /*------cabeçalho desktop-----*/
-    header.header {
-        height: 100vh;
-        grid-template-rows: 30% 15% 10% 30%;
+    header.header h1{
+        max-width: 800px;
     }
 
-    div.button-header {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .button {
-        margin: 0 10px;
+    header.header p{
+        font: normal normal normal 18px/26px Roboto;
+        max-width: 500px;
     }
 
     /*------Seção clientes-----*/
