@@ -53,7 +53,7 @@ $("#cpf").mask("999.999.999-99");
 
 
 //Click de qualquer botão da pagina mostra Modal
-const buttons = document.querySelectorAll(".button");
+const buttons = document.querySelectorAll(".btn-1");
 buttons.forEach(function (button) {
     button.addEventListener("click", iniciaModal);
 });
@@ -85,3 +85,55 @@ btnEnviar.addEventListener("click", function (event) {
             alert("Lead Enviado com Sucesso!");
         })
 })
+
+//Efeito Carrossel
+
+//Inicio
+let nInicio = 1
+mudaSlide(nInicio);
+//evento MudaSlide
+function mudaSlide(start) {
+    const tdBooll = document.querySelectorAll(".boll");
+    const tdSlide = document.querySelectorAll(".slide");
+
+    for (let i = 0; i < tdSlide.length; i++) {
+        tdSlide[i].style.display = "none";
+        tdBooll[i].classList.remove("D");
+    }
+    tdSlide[start - 1].style.display = "block";
+    tdBooll[start - 1].classList.add("D");
+
+    nInicio = start;
+    console.log("inicial " + nInicio);
+    console.log(" teste" + start);
+}
+
+//pegar elemento boll
+const bolls = document.querySelectorAll(".boll");
+//Click do elemento boll
+bolls.forEach(function (idbtn) {
+    idbtn.addEventListener("click", event=>{
+        const id = event.target.id
+        nInicio = id;
+        mudaSlide(id);
+    })
+});
+
+//pegando elementos prev e next
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+//Click dos elementos prev e next
+next.addEventListener("click", function(){
+    nInicio ++;
+    if(nInicio > 4){
+        nInicio = 1; 
+    }
+    mudaSlide(nInicio);
+});
+prev.addEventListener("click", function(){
+    nInicio --;
+    if(nInicio < 1){
+        nInicio = 4;
+    }
+    mudaSlide(nInicio);
+});
