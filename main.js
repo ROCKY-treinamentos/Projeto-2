@@ -25,7 +25,7 @@ const getKey = (event) => {
 }
 
 //evento click em todos os .arrow
-arrows.forEach(function (arrow) {
+arrows.forEach((arrow) =>{
     arrow.addEventListener("click", option);
 });
 
@@ -59,32 +59,46 @@ buttons.forEach(function (button) {
     button.addEventListener("click", iniciaModal);
 });
 
+function validacao(btnevent) {
+    let preenchido = true;
+
+    let requireds = document.querySelectorAll("[required]");
+    requireds.forEach((event) => {
+
+        event.addEventListener("invalid", () => {
+            preenchido = false;
+
+            if (preenchido) {
+                let name = document.querySelector("#name");
+                let tel = document.querySelector("#tel");
+                let cpf = document.querySelector("#cpf");
+                let email = document.querySelector("#email");
+
+                let dados = {
+                    name: name.value,
+                    tel: tel.value,
+                    cpf: cpf.value,
+                    email: email.value
+                };
+                fetch('https://reqres.in/api/users', {
+                        method: 'POST',
+                        doby: JSON.stringify(dados)
+                    })
+                    .then(function (response) {
+                        return response.json()
+                    })
+                    .then(function (response) {
+                        console.log(response);
+                    })
+            }
+        })
+    });
+}
+
 //Envia formulario Ajax
-let name = document.querySelector("#name");
-let tel = document.querySelector("#tel");
-let cpf = document.querySelector("#cpf");
-let email = document.querySelector("#email");
 let btnEnviar = document.querySelector("#enviar");
-
-btnEnviar.addEventListener("click", function (event) {
-    event.preventDefault();
-
-    let dados = {
-        name: name.value,
-        tel: tel.value,
-        cpf: email.value
-    };
-    fetch('https://reqres.in/api/users', {
-            method: 'POST',
-            doby: JSON.stringify(dados)
-        })
-        .then(function (response) {
-            return response.json()
-        })
-        .then(function (response) {
-            escondeModal()
-            alert("Lead Enviado com Sucesso!");
-        })
+btnEnviar.addEventListener("click", (btnevent) =>{
+    validacao(btnevent);
 })
 
 //Efeito Carrossel
@@ -105,15 +119,13 @@ function mudaSlide(start) {
     tdBooll[start - 1].classList.add("D");
 
     nInicio = start;
-    console.log("inicial " + nInicio);
-    console.log(" teste" + start);
 }
 
 //pegar elemento boll
 const bolls = document.querySelectorAll(".boll");
 //Click do elemento boll
 bolls.forEach(function (idbtn) {
-    idbtn.addEventListener("click", event=>{
+    idbtn.addEventListener("click", event => {
         const id = event.target.id
         nInicio = id;
         mudaSlide(id);
@@ -124,16 +136,16 @@ bolls.forEach(function (idbtn) {
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 //Click dos elementos prev e next
-next.addEventListener("click", function(){
-    nInicio ++;
-    if(nInicio > 4){
-        nInicio = 1; 
+next.addEventListener("click", function () {
+    nInicio++;
+    if (nInicio > 4) {
+        nInicio = 1;
     }
     mudaSlide(nInicio);
 });
-prev.addEventListener("click", function(){
-    nInicio --;
-    if(nInicio < 1){
+prev.addEventListener("click", function () {
+    nInicio--;
+    if (nInicio < 1) {
         nInicio = 4;
     }
     mudaSlide(nInicio);
