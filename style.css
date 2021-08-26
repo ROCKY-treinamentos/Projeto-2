@@ -1,13 +1,12 @@
-/*Importando font-Roboto*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+/*Importando font-Yantramanav*/
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@300&display=swap');
 
 /*-----Reset------*/
 * {
     padding: 0;
     margin: 0;
     border: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Yantramanav', sans-serif;
 }
 
 
@@ -17,24 +16,30 @@ header {
     height: 120vh;
     background-image: linear-gradient(#1A1A1A, #2C2C2C);
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: 15% 25% 20%;
     box-sizing: border-box;
     justify-items: center;
 }
 
+h1 {
+    font: normal normal normal 54px/70px Yantramanav;
+    letter-spacing: 1.13px;
+}
+
 h2 {
-    font: normal normal normal 48px/62px Roboto;
+    font: normal normal normal 46px/59px Yantramanav;
+    letter-spacing: 0.97px;
     color: #FFFFFF;
     align-self: flex-start;
-    letter-spacing: 2px;
 }
 
 p {
-    font: normal normal normal 14px/26px Roboto;
+    font: normal normal 300 18px/26px Yantramanav;
+    letter-spacing: 0px;
     color: #B5B5B5;
 }
 
-.display-none-mobile {
+.display {
     display: none;
 }
 
@@ -58,7 +63,7 @@ header.header p {
 }
 
 h1 {
-    font: normal normal normal 40px/52px Roboto;
+    font: normal normal normal 40px/52px Yantramanav;
     letter-spacing: 0.85px;
     text-transform: capitalize;
 }
@@ -66,7 +71,7 @@ h1 {
 header.header p {
     width: 75vw;
     max-width: 300px;
-    font: normal normal 300 12px/26px Roboto;
+    font: normal normal 300 12px/26px Yantramanav;
     color: #B5B5B5;
     margin-top: 3vh;
 }
@@ -155,7 +160,7 @@ article.article-clients:hover {
 }
 
 article.article-clients h5 {
-    font: normal normal bold 14px/18px Roboto;
+    font: normal normal bold 14px/18px Yantramanav;
     letter-spacing: 2px;
     color: #F89D24;
     text-transform: uppercase;
@@ -172,7 +177,7 @@ section.section-value {
 }
 
 article.article-text h2 {
-    font: normal normal normal 41px/52px Roboto;
+    font: normal normal normal 41px/52px Yantramanav;
     text-align: center;
     letter-spacing: 0.85px;
     text-transform: capitalize;
@@ -237,7 +242,7 @@ section.section-options div.options img {
 
 section.section-options div.options p {
     color: #FFFFFF;
-    font: normal normal bold 18px/31px Roboto;
+    font: normal normal bold 18px/31px Yantramanav;
     letter-spacing: 1px;
 }
 
@@ -268,7 +273,7 @@ section.section-options div.options-description {
 }
 
 section.section-options div.options-description p {
-    font: normal normal 300 18px/31px Roboto;
+    font: normal normal 300 18px/31px Yantramanav;
 }
 
 /*-----section-teachers------*/
@@ -314,7 +319,7 @@ article.article-teacher img {
 
 article.article-teacher h5 {
     color: #F89D24;
-    font: normal normal bold 14px/18px Roboto;
+    font: normal normal bold 14px/18px Yantramanav;
     margin-top: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -322,7 +327,7 @@ article.article-teacher h5 {
 }
 
 article.article-teacher p {
-    font: normal normal bold 16px/26px Roboto;
+    font: normal normal bold 16px/26px Yantramanav;
     margin-top: 5px;
     text-align: left;
     color: #B5B5B5;
@@ -341,11 +346,16 @@ section.section-carousel {
     text-align: center;
 }
 
+@keyframes aparicion{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
 section.section-carousel div.slides {
     display: flex;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
     align-items: center;
 }
 
@@ -357,9 +367,7 @@ section.section-carousel div.slides {
     display: grid;
     grid-column: auto;
     justify-content: center;
-    scroll-snap-align: start;
-    pointer-events: none;
-    scroll-behavior: smooth;
+    animation: aparicion 3s;
 }
 
 div.slides div.prev {
@@ -389,6 +397,7 @@ div.slides div.next {
 
 div.bolls {
     width: 200px;
+    height: 100%;
     margin-top: 100px;
     display: flex;
     justify-content: space-around;
@@ -397,6 +406,7 @@ div.bolls {
 div.bolls div.boll.D {
     background-color: #6E6E6E;
     width: 60px;
+    height: 8px;
     border-radius: 40%;
     transition-duration: 1.5s;
 }
@@ -411,14 +421,14 @@ div.bolls div.boll {
 
 section.section-carousel h2 {
     color: #FFFFFF;
-    font: normal normal normal 40px/52px Roboto;
+    font: normal normal normal 40px/52px Yantramanav;
     letter-spacing: 0.85px;
     max-width: 800px;
 
 }
 
 section.section-carousel p {
-    font: normal normal bold 18px/23px Roboto;
+    font: normal normal bold 18px/23px Yantramanav;
     letter-spacing: 2.57px;
     color: #F89D24;
     text-transform: uppercase;
@@ -438,7 +448,7 @@ section.section-methodology ul {
 }
 
 section.section-methodology ul li {
-    font: normal normal bold 14px/18px Roboto;
+    font: normal normal bold 14px/18px Yantramanav;
     letter-spacing: 2px;
     color: #F89D24;
     text-transform: uppercase;
@@ -535,9 +545,10 @@ form {
 
 form h2 {
     margin-bottom: 32px;
-    font: normal normal normal 40px/62px Roboto;
+    font: normal normal normal 40px/62px Yantramanav;
     position: absolute;
     top: -50px;
+    left: -2px;
     background-color: #6E6E6E;
     padding: 2.5px 20px;
     border-radius: 10px;
@@ -575,7 +586,7 @@ form button {
 form button {
     margin-top: 16px;
     background-color: #F89D24;
-    font: normal normal normal 16px Roboto;
+    font: normal normal normal 16px Yantramanav;
     color: #FFFFFF;
 }
 
@@ -621,6 +632,7 @@ input:valid~label {
     .display-screen-2 {
         display: none;
     }
+
     /*------Seção clientes-----*/
     section.section-clients div.grid-column-2 {
         grid-template-columns: 40% 40%;
@@ -641,6 +653,10 @@ input:valid~label {
 
     div.grid-teachers article.article-teacher {
         width: 100%;
+    }
+
+    section.section-carousel {
+        padding: 200px 0px;
     }
 
     /*------Footer-----*/
@@ -664,18 +680,18 @@ input:valid~label {
 @media screen and (min-width:1300px) {
 
     h1 {
-        font: normal normal normal 54px/70px Roboto;
+        font: normal normal normal 54px/70px Yantramanav;
         letter-spacing: 1.13px;
     }
 
     h2 {
-        font: normal normal normal 64px/83px Roboto;
+        font: normal normal normal 64px/83px Yantramanav;
         letter-spacing: 1.34px;
         color: #FFFFFF;
     }
 
     p {
-        font: normal normal normal 18px/26px Roboto;
+        font: normal normal normal 18px/26px Yantramanav;
     }
 
     header.header h1 {
@@ -683,7 +699,7 @@ input:valid~label {
     }
 
     header.header p {
-        font: normal normal normal 18px/26px Roboto;
+        font: normal normal normal 18px/26px Yantramanav;
         max-width: 500px;
     }
 
@@ -743,7 +759,7 @@ input:valid~label {
 
     /*------Seção Opções-----*/
 
-    .display-none-mobile {
+    .display {
         display: block;
     }
 
@@ -751,7 +767,7 @@ input:valid~label {
         display: none;
     }
 
-    div.display-screen-2 {
+    div.display-screen-2{
         display: none;
     }
 
@@ -772,13 +788,13 @@ input:valid~label {
 
     section.section-options div.column-option div.options:first-child p {
         width: 100%;
-        font: normal normal normal 22px/41px Roboto;
+        font: normal normal normal 22px/41px Yantramanav;
         color: #FFFFFF;
         border-bottom: 1px solid #F89D24;
     }
 
     section.section-options div.column-option p {
-        font: normal normal 100 22px/41px Roboto;
+        font: normal normal 100 22px/41px Yantramanav;
         letter-spacing: 0.67px;
         color: #FFFFFF;
         opacity: 1;
@@ -795,11 +811,11 @@ input:valid~label {
         padding: 72px 123px;
     }
 
-     div.column-description p strong {
+    div.column-description p strong {
         color: #FFFFFF;
     }
 
-     div.column-description div.button-header {
+    div.column-description div.button-header {
         justify-content: flex-end;
         padding: 0;
         margin: 0;
@@ -810,7 +826,7 @@ input:valid~label {
         width: 120px;
     }
 
-    div.button-header>button.button:hover{
+    div.button-header>button.button:hover {
         border: 1px solid;
     }
 
@@ -822,6 +838,7 @@ input:valid~label {
     div.column-description div.button-header>button.btn-2 {
         color: #F89D24;
     }
+
     /*------Seção Professores-----*/
     section.section-teachers h2 {
         margin-top: 90px;
@@ -846,7 +863,7 @@ input:valid~label {
 
     /*------Seção Carrosel-----*/
     section.section-carousel {
-        padding: 100px 0px;
+        padding: 200px 0px;
     }
 
     section.section-carousel p {
@@ -858,7 +875,7 @@ input:valid~label {
     /*------Seção Metodologia-----*/
     section.section-methodology {
         display: grid;
-        grid-template-columns: 28% 40%;
+        grid-template-columns: 30% 40%;
         grid-template-rows: 60%;
         grid-gap: 50px 100px;
         justify-content: center;
