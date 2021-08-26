@@ -87,11 +87,17 @@ div.button-header {
     margin: 0 0 20px 0;
     color: #FFFFFF;
     font-size: 14px;
+    transition: .4s ease-in-out
+}
+
+.button:hover {
+    width: 180px;
+    font-size: 16px;
 }
 
 .btn-1 {
     background-color: initial;
-    border: 1px solid #FFFFFF
+    border: 1px solid #FFFFFF;
 }
 
 .btn-2 {
@@ -141,6 +147,11 @@ article.article-clients {
     box-sizing: border-box;
     padding: 24px;
     justify-content: center;
+}
+
+article.article-clients:hover {
+    border: 1.5px solid #FFFFFF;
+    box-shadow: 4px 4px 10px #6E6E6E;
 }
 
 article.article-clients h5 {
@@ -216,11 +227,12 @@ section.section-options div.options {
 
 section.section-options div.options img {
     width: 40px;
+    transition: transform .4s ease-in-out
 }
 
 .rotate {
-    transition-duration: 0.5s;
     transform: rotate(180deg);
+
 }
 
 section.section-options div.options p {
@@ -238,6 +250,21 @@ section.section-options div.options-description {
     border: 2px solid #F89D24;
     border-left: 0px;
     border-right: 0px;
+    display: none;
+    animation: show .75s ease-in;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translate3d(-90px, 0, 0);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 section.section-options div.options-description p {
@@ -276,6 +303,11 @@ article.article-teacher {
     text-align: center;
 }
 
+article.article-teacher:hover {
+    border: 1.2px solid #FFFFFF;
+    box-shadow: 4px 4px 10px #6E6E6E;
+}
+
 article.article-teacher img {
     width: 100%;
 }
@@ -309,15 +341,15 @@ section.section-carousel {
     text-align: center;
 }
 
-section.section-carousel div.slides{
+section.section-carousel div.slides {
     display: flex;
-    overflow-x:hidden;
+    overflow-x: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     align-items: center;
 }
 
-.slide{
+.slide {
     width: 100%;
     height: 100%;
     flex: none;
@@ -330,7 +362,7 @@ section.section-carousel div.slides{
     scroll-behavior: smooth;
 }
 
-div.slides div.prev{
+div.slides div.prev {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -343,7 +375,7 @@ div.slides div.prev{
     border-right: 0;
 }
 
-div.slides div.next{
+div.slides div.next {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -355,21 +387,21 @@ div.slides div.next{
     border-left: 0;
 }
 
-div.bolls{
+div.bolls {
     width: 200px;
     margin-top: 100px;
     display: flex;
     justify-content: space-around;
 }
 
-div.bolls div.boll.D{
+div.bolls div.boll.D {
     background-color: #6E6E6E;
     width: 60px;
     border-radius: 40%;
     transition-duration: 1.5s;
 }
 
-div.bolls div.boll{
+div.bolls div.boll {
     width: 10px;
     height: 10px;
     background-color: #FFFFFF;
@@ -382,7 +414,7 @@ section.section-carousel h2 {
     font: normal normal normal 40px/52px Roboto;
     letter-spacing: 0.85px;
     max-width: 800px;
-    
+
 }
 
 section.section-carousel p {
@@ -443,7 +475,7 @@ footer p {
 }
 
 /*-------Formulario Modal-------*/
-div.modal{
+div.modal {
     background: #2c2c2c96;
     width: 100vw;
     height: 100vh;
@@ -456,12 +488,14 @@ div.modal{
 
 }
 
-@keyframes teste{
-    from{
+@keyframes teste {
+    from {
         opacity: 0;
         transform: translate3d(0, -60px, 0);
 
-    }to{
+    }
+
+    to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
@@ -469,11 +503,11 @@ div.modal{
 
 .modal.mostrar {
     display: flex;
-    animation:teste 1s;
+    animation: teste 1s;
 }
 
-button.close{
-    width:55px;
+button.close {
+    width: 55px;
     height: 55px;
     position: absolute;
     color: #FFFFFF;
@@ -485,40 +519,49 @@ button.close{
     border: 2px solid #686868;
 
 }
-form{
+
+form {
     background-image: linear-gradient(#1A1A1A, #2C2C2C);
     width: 70%;
-    max-width: 500px;
+    height: auto;
+    max-width: 400px;
     margin: 32px auto;
     padding: 32px;
+    padding-top: 40px;
     border: 2px solid #FEC024;
     border-style: inset;
     position: relative;
-    
 }
 
-form h2{
+form h2 {
     margin-bottom: 32px;
-    font: normal normal normal 48px/62px Roboto;
+    font: normal normal normal 40px/62px Roboto;
+    position: absolute;
+    top: -50px;
+    background-color: #6E6E6E;
+    padding: 2.5px 20px;
+    border-radius: 10px;
 }
 
-div.input{
+div.input {
     margin-bottom: 24px;
     position: relative;
 }
 
-div.check{
+div.check {
     display: flex;
     color: #FFFFFF;
     justify-content: flex-start;
     align-items: center
 }
-input#check{
+
+input#check {
     width: 40px;
-    appearance:auto;
+    appearance: auto;
 }
 
-form input, form button{
+form input,
+form button {
     appearance: none;
     width: 100%;
     padding: 16px 0;
@@ -529,7 +572,7 @@ form input, form button{
     color: #FFFFFF;
 }
 
-form button{
+form button {
     margin-top: 16px;
     background-color: #F89D24;
     font: normal normal normal 16px Roboto;
@@ -537,26 +580,16 @@ form button{
 }
 
 
-input ~ label{
+input~label {
     position: absolute;
-    top: 16px;
+    top: 10px;
     left: 0;
-    color:#FFFFFF;
+    color: #FFFFFF;
     transition: .4s;
 }
 
-input span.error{
-    display: flex;
-    padding: 0;
-    background-color: red;
-}
-
-span.error.active{
-    border: 1px solid red;
-    padding: 0.4em;
-}
-
-input:focus ~ label, input:valid ~ label{
+input:focus~label,
+input:valid~label {
     transform: translateY(-24px);
     font-size: 0.8em;
     letter-spacing: 0.1em;
@@ -566,8 +599,8 @@ input:focus ~ label, input:valid ~ label{
 /*------------------*/
 @media screen and (min-width:760px) {
 
-     /*------cabeçalho desktop-----*/
-     header.header {
+    /*------cabeçalho desktop-----*/
+    header.header {
         height: 100vh;
         grid-template-rows: 30% 20% 10% 30%;
     }
@@ -581,26 +614,48 @@ input:focus ~ label, input:valid ~ label{
         margin: 0 10px;
     }
 
+    .display-screen-1 {
+        display: flex;
+    }
+
+    .display-screen-2 {
+        display: none;
+    }
     /*------Seção clientes-----*/
-    section.section-clients div.grid-column-2{
+    section.section-clients div.grid-column-2 {
         grid-template-columns: 40% 40%;
         grid-template-rows: auto;
         grid-gap: 30px;
     }
 
-    section.section-clients article.article-clients{
+    section.section-clients article.article-clients {
         width: 100%;
     }
 
     /*------Seção Professores-----*/
-    section.section-teachers div.grid-teachers{
+    section.section-teachers div.grid-teachers {
         grid-template-columns: 40% 40%;
         grid-template-rows: auto;
         justify-content: center
     }
 
-    div.grid-teachers article.article-teacher{
+    div.grid-teachers article.article-teacher {
         width: 100%;
+    }
+
+    /*------Footer-----*/
+    footer {
+        height: 186px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    footer ul.display-screen-1 li.display-screen-1 {
+        display: inline;
+        color: #B5B5B5;
+        margin-left: 10px;
     }
 
 }
@@ -618,15 +673,16 @@ input:focus ~ label, input:valid ~ label{
         letter-spacing: 1.34px;
         color: #FFFFFF;
     }
+
     p {
         font: normal normal normal 18px/26px Roboto;
     }
 
-    header.header h1{
+    header.header h1 {
         max-width: 800px;
     }
 
-    header.header p{
+    header.header p {
         font: normal normal normal 18px/26px Roboto;
         max-width: 500px;
     }
@@ -691,11 +747,11 @@ input:focus ~ label, input:valid ~ label{
         display: block;
     }
 
-    .display-none {
+    .display-screen-2 {
         display: none;
     }
 
-    div.display-none {
+    div.display-screen-2 {
         display: none;
     }
 
@@ -739,31 +795,33 @@ input:focus ~ label, input:valid ~ label{
         padding: 72px 123px;
     }
 
-    section.section-options div.column-description p strong {
+     div.column-description p strong {
         color: #FFFFFF;
     }
 
-    section.section-options div.column-description div.button-header {
+     div.column-description div.button-header {
         justify-content: flex-end;
         padding: 0;
         margin: 0;
     }
 
-    section.section-options div.column-description div.button-header>button.button {
+    div.column-description div.button-header>button.button {
         font-size: 11px;
-        width: 100px;
+        width: 120px;
     }
 
-    section.section-options div.column-description div.button-header>button {
-        padding: 0px;
+    div.button-header>button.button:hover{
+        border: 1px solid;
+    }
+
+    div.column-description div.button-header>button {
         background-color: inherit;
         border: inherit;
     }
 
-    section.section-options div.column-description div.button-header>button.btn-2 {
+    div.column-description div.button-header>button.btn-2 {
         color: #F89D24;
     }
-
     /*------Seção Professores-----*/
     section.section-teachers h2 {
         margin-top: 90px;
@@ -853,21 +911,6 @@ input:focus ~ label, input:valid ~ label{
 
     div.container-question div.button-header {
         justify-content: flex-start;
-    }
-
-    /*------Footer-----*/
-    footer {
-        height: 186px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: baseline;
-    }
-
-    footer ul.display-none-mobile li.display-none-mobile {
-        display: inline;
-        color: #B5B5B5;
-        margin-left: 10px;
     }
 
 }

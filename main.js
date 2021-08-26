@@ -7,6 +7,7 @@ function option(event) {
     //abilita e desabilita o displzy
     if (description.style.display == "none") {
         description.style.display = "block";
+        console.log(description.classList);
         event.target.classList.add("rotate");
 
     } else {
