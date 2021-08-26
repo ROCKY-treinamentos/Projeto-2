@@ -166,7 +166,7 @@ article.article-clients h5 {
 /*-----section-value------*/
 
 section.section-value {
-    background: linear-gradient(#1a1a1ad8, #2c2c2c1f), url(/img/Fundo-formas.svg) center bottom no-repeat, #1A1A1A;
+    background: linear-gradient(#1a1a1ad8, #2c2c2c1f), url(./img/Fundo-formas.svg) center bottom no-repeat, #1A1A1A;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -458,7 +458,7 @@ section.section-methodology p {
 /*-----section-question------*/
 section.section-question {
     width: 100;
-    background: linear-gradient(#2c2c2c63, #1a1a1ab2), url(/img/negociando.png) center bottom no-repeat, #1A1A1A;
+    background: linear-gradient(#2c2c2c63, #1a1a1ab2), url(./img/negociando.png) center bottom no-repeat, #1A1A1A;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -884,7 +884,7 @@ input:valid~label {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 4fr;
         height: 100%;
-        background: linear-gradient(#2c2c2c63, #1a1a1ab2), url(/img/negociando2x.png) 0% bottom no-repeat, #1A1A1A;
+        background: linear-gradient(#2c2c2c63, #1a1a1ab2), url(./img/negociando2x.png) 0% bottom no-repeat, #1A1A1A;
         background-size: contain;
         background-attachment: fixed;
         justify-items: center;
