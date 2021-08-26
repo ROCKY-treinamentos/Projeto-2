@@ -629,10 +629,6 @@ input:valid~label {
         display: flex;
     }
 
-    .display-screen-2 {
-        display: none;
-    }
-
     /*------Seção clientes-----*/
     section.section-clients div.grid-column-2 {
         grid-template-columns: 40% 40%;
