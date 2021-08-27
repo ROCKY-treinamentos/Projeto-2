@@ -624,6 +624,9 @@ input:valid~label {
     .button {
         margin: 0 10px;
     }
+    footer p.display-screen-2{
+        display: none;
+    }
 
     .display-screen-1 {
         display: flex;
