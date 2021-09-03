@@ -146,6 +146,7 @@ div.block-border {
     position: absolute;
     margin: -43px 0 0 -10px;
     align-self: flex-start;
+    justify-self:flex-start;
 }
 
 div.grid-column-2 {
