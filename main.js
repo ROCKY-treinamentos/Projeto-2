@@ -24,7 +24,7 @@ const getKey = (event) => {
 }
 
 //evento click em todos os .arrow
-arrows.forEach((arrow) =>{
+arrows.forEach((arrow) => {
     arrow.addEventListener("click", option);
 });
 
@@ -58,7 +58,7 @@ buttons.forEach(function (button) {
     button.addEventListener("click", iniciaModal);
 });
 
-function validacao(btnevent) {
+function validacao() {
     let preenchido = true;
 
     let requireds = document.querySelectorAll("[required]");
@@ -96,14 +96,13 @@ function validacao(btnevent) {
 
 //Envia formulario Ajax
 let btnEnviar = document.querySelector("#enviar");
-btnEnviar.addEventListener("click", (btnevent) =>{
-    validacao(btnevent);
-})
+btnEnviar.addEventListener("click", validacao);
 
 //Efeito Carrossel
 
 //Inicio
-let nInicio = 1
+let nInicio = 1;
+const tempoS = 5000;
 mudaSlide(nInicio);
 //evento MudaSlide
 function mudaSlide(start) {
@@ -112,12 +111,21 @@ function mudaSlide(start) {
 
     for (let i = 0; i < tdSlide.length; i++) {
         tdSlide[i].style.display = "none";
-        tdBooll[i].classList.remove("D");
+        tdBooll[i].classList.remove("active");
     }
     tdSlide[start - 1].style.display = "block";
-    tdBooll[start - 1].classList.add("D");
+    tdBooll[start - 1].classList.add("active");
+}
 
-    nInicio = start;
+//Valida nInicio
+function validaN(index) {
+    nInicio = index;
+    if (index > 4) {
+        nInicio = 1;
+    } else if (index < 1) {
+        nInicio = 4;
+    }
+    mudaSlide(nInicio);
 }
 
 //pegar elemento boll
@@ -137,15 +145,16 @@ const prev = document.querySelector(".prev");
 //Click dos elementos prev e next
 next.addEventListener("click", function () {
     nInicio++;
-    if (nInicio > 4) {
-        nInicio = 1;
-    }
-    mudaSlide(nInicio);
+    validaN(nInicio);
 });
 prev.addEventListener("click", function () {
     nInicio--;
-    if (nInicio < 1) {
-        nInicio = 4;
-    }
-    mudaSlide(nInicio);
+    validaN(nInicio);
+
 });
+
+//Muda o slide a cada determinado tempo
+setInterval(function () {
+    nInicio++;
+    validaN(nInicio);
+}, tempoS);
